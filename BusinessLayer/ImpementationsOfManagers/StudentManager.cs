@@ -8,7 +8,7 @@ namespace BusinessLayer.ImpementationsOfManagers
 {
     public class StudentManager : Manager<StudentVM, Student, int>, IStudentManager
     {
-        public StudentManager(IStudentRepo repo, IMapper mapper) : base(repo, mapper, "Floor")
+        public StudentManager(IStudentRepo repo, IMapper mapper) : base(repo, mapper, null)
         {
 
         }
