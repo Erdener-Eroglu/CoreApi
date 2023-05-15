@@ -1,5 +1,9 @@
 using AutoMapper.Extensions.ExpressionMapping;
+using BusinessLayer.ImpementationsOfManagers;
+using BusinessLayer.InterfacesOfManagers;
 using DataLayer;
+using DataLayer.ImplementationOfRepo;
+using DataLayer.InterfacesOfRepo;
 using EntityLayer.Mapping;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,7 +24,8 @@ builder.Services.AddAutoMapper(x =>
 
 
 //Interfacelerin ADDSCOPED þeklindeki yaþam döngüleri eklenecek.
-
+builder.Services.AddScoped<IStudentRepo, StudentRepo>();
+builder.Services.AddScoped<IStudentManager, StudentManager>();
 
 // Add services to the container.
 
